@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/OneStop/Desktop/azure-storage-4.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/OneStop/Desktop/com.sap.xpi.ib.mapping.lib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/OneStop/Desktop/jackson-core-2.2.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
