@@ -1,0 +1,76 @@
+SalesChannelSiteNavigationBarMenuGroupCatalogs
+
+application/menugroups/Catalogs_52-SalesChannelSiteNavigationBarMenuGroupCatalogs  >>ext pt.
+application/menugroups/Catalogs_52-SalesChannelSiteNavigationBarMenuGroupCatalogs
+
+
+application/sitenavigationbar/catalogs/LEAward_52.isml  >>extension  >>template
+application/sitenavigationbar/catalogs/CustomerSegmentPayment_52.isml
+
+----------------------------------------------------------------------------------------------------------
+SELECT distinct CG.ID AS UUID,
+		COUNT(CG.ID) OVER() AS ROWCOUNT
+	FROM ConsumerGroup CG, paymentusergroupassignment PGA where CG.ID like 'CG_PAYMENT%' and CG.domainid=(select domainid from domaininformation where domainname='AusPost-Shop-Anonymous')
+and CG.domainID=PGA.usergroupdomainid and PGA.USERGROUPDOMAINID=(Select Domainid from domaininformation where domainname='AusPost-Shop-Anonymous');
+
+----------------------------------------------------------------------------------------------------------
+select * from preferencedefinition where preferencename ='CustomerSegmentEnabled'; CustomerSegmentEnabled
+
+select * from preferencedefinition where preferencename ='MyPostMerchantCode';
+
+select * from consumergroup;
+
+select * from paymentusergroupassignment;
+
+SELECT distinct(CG.ID) AS UUID,
+		COUNT(distinct CG.ID) OVER() AS ROWCOUNT
+	FROM ConsumerGroup CG, paymentusergroupassignment PGA where CG.ID like 'CG_PAYMENT%' and CG.domainid=(select domainid from domaininformation where domainname='AusPost-Shop-Anonymous')
+and CG.domainID=PGA.usergroupdomainid and PGA.USERGROUPDOMAINID=(Select Domainid from domaininformation where domainname='AusPost-Shop-Anonymous');
+
+
+select * from ConsumerGroup cg, paymentusergroupassignment pga where CG.domainID=PGA.usergroupdomainid;
+
+select * from domaininformation where domainid='KHQKbhlj040AAAFsDNMy7EK2';
+
+select * from repository where domainid='';
+-----------------------------------------------------------------------------------------------------------
+select * from Employees;
+
+select * from domaininformation where domainname like 'AusPost%'; KHQKbhlj040AAAFsDNMy7EK2   
+
+select * from EmployeeDetails;
+
+Insert into EmployeeDetails (EmployeeName,EmployeeID,DepartmentName,Salary,UUID,DOMAINID,OCA,LASTMODIFIED) 
+values ('Shivy','10002','IT',50000,'7DcKCAAKMTYAAAFt4wMMaE1X','KHQKbhlj040AAAFsDNMy7EK2',0,to_timestamp('08-07-19 11:34:40.767000000 AM','DD-MM-RR HH12:MI:SS.FF AM'));
+
+update employeedetails set employeeid='1003' where employeename='assa';
+
+delete from employeedetails where employeeid='1003';
+-----------------------------------------------------------------------------------------------------------
+select * from customer cus, customer_av cus_av where cus.uuid=cus_av.ownerid;
+
+select * from customer_av; hxQKbhljyicAAAFs75Ey7EK3
+
+select * from domaininformation; rbwKbhljpswAAAFsgs4y7EK2
+
+SELECT * FROM sTATEcODE;
+
+SELECT * FROM gstmapping;
+
+SELECT UUID, COUNT(*) OVER() AS ROWCOUNT, LASTMODIFIED FROM GSTMAPPING;
+
+SELECT  sc.uuid, count(sc.uuid) over() as ROWCOUNT
+	FROM STATECODE sc;
+
+Insert into sTATEcODE (statename,statecode,uuid,domainid,oca,lastmodified) 
+values ('UP','20','2_0KCAAG900AAAFtTHJovGK1','rbwKbhljpswAAAFsgs4y7EK2',0,to_timestamp('08-07-19 11:34:40.767000000 am','dd-mm-rr hh12:mi:ss.ff am'));
+
+SELECT UUID, COUNT(*) OVER() AS ROWCOUNT, ORDER BY LASTMODIFIED FROM GSTMAPPING;
+
+SELECT gst.UUID COUNT(*) OVER() AS ROWCOUNT, LASTMODIFIED FROM GSTMAPPING gst
+----------------------------------------------------------------------------------------------------------
+
+
+
+
+

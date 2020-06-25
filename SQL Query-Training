@@ -1,0 +1,58 @@
+select * from basicprofile;
+select * from basiccredentials;
+select * from customer;
+select * from basket;
+select * from productlineitem;
+select * from isorder;
+select *from catalogcategory;
+select * from catalog;
+select * from preference;
+select * from preferencedefinition;
+select * from domaininformation;
+select * from staticaddress;
+select * from basicaddress;
+select * from product;
+===========================
+
+SELECT
+	>> SELECT	
+	>> DISTINCT COLUMN_NAME
+	>> COUNT(DISTINCT COLUMN_NAME)
+	>> COUNT(DISTINCT COLUMN_NAME) AS ROWCOUNT
+	
+WHERE 
+	>> =
+	>> >
+	>> <
+	>> >=
+	>> <=
+	>> <> OR !=
+	>> LIKE
+	>> IN
+	>> BETWEEN
+	
+
+
+======================================
+
+select COUNT(DISTINCT suppliername) AS ROWCOUNT from product;
+select * from product WHERE parentsku='69973';
+select SKU, maxorderquantityvalue from product WHERE maxorderquantityvalue <>'9999';
+select * from product WHERE SKU LIKE '%ShipFromStore';
+select * from basket where uuid IN(select basketid from isorder);
+select supplierlocationsid from product where supplierlocationsid IN('AusPost-Altona', 'AusPost-Rowville');
+select * from basket where creationdate between '01-10-19 08:30:20.030000000 AM' AND '10-10-19 08:30:20.030000000 AM';
+
+SELECT * FROM preferencedefinition ORDER BY lastmodified desc;
+select * from preference order by lastmodified desc;
+select * from preference where domainid='l2kKCAAG3ZUAAAFtAQJiFHPD' order by lastmodified desc;
+select * from domaininformation where domainid='IAEKCAAGMN8AAAFtFHliFHOq';  ==>>system
+select * from domaininformation  where domainname like 'AusPost%';
+
+
+
+===========================
+Insert into Product (POST_CODE,SUBURB,STATE,UUID,DOMAINID,OCA,LASTMODIFIED) values (5413,'TOTHILL CREEK','SA','vMEKCAAOGRgAAAFrbyU2jOCH','tpAKCAAaM6oAAAFrggRXVNFy',0,to_timestamp('08-07-19 11:34:40.767000000 AM','DD-MM-RR HH12:MI:SS.FF AM'));
+
+ALTER TABLE product ADD custom_prod VARCHAR(256);
+commit;
